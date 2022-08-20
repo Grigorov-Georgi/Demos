@@ -20,4 +20,8 @@ public class IncredibleMachine {
     public void echo(String text){
         LOGGER.info("I'm echoing this {}", text);
     }
+
+    public String concat(String a, String b) {
+        return a + b;
+    }
 }

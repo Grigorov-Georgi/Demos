@@ -7,12 +7,17 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
 @Aspect
 @Component
+@ConditionalOnProperty(
+        value = "sample1.enabled",
+        havingValue = "true"
+)
 public class Sample1Aspect {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Sample1Aspect.class);
