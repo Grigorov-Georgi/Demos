@@ -26,7 +26,7 @@ public class Sample2Aspect {
     public String onConcat(ProceedingJoinPoint pjp,
                          String a,
                          String b) throws Throwable {
-        LOGGER.info("The on concat method was called with arguments [{}] and [{}]",
+        LOGGER.info("The on concat method was called with arguments [{}]  and [{}]",
                 a,
                 b);
 
